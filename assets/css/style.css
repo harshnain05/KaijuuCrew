@@ -1,0 +1,28 @@
+@import url('https://fonts.cdnfonts.com/css/godzilla');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+ 
+.font-ring{
+     font-family: "Righteous", sans-serif;
+}
+ 
+.oswald{
+font-family: "Oswald", sans-serif;
+}
+
+.animate-slide {
+    animation: slide 30s linear infinite;
+}
+.animate-slide:hover{
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

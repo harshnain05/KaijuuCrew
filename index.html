@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KaijuuCrew</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link href="https://fonts.cdnfonts.com/css/godzilla" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'godzilla': ['Godzilla', 'sans-serif'],
+                        },
+                        screens: {
+                            'xl-1500': '1500px',
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+
+    <body class="mx-auto max-w-[1920px]">
+        <!-- ----------------------hero-section----------------------------- -->
+        <section
+            class=" bg-cover overflow-hidden min-h-screen bg-no-repeat bg-[url('./assets/image/png/top-sec-bg.png')]">
+            <nav
+                class="flex bg-black justify-between xl:px-[300px] items-center xl:pt-[35px] lg:pt-7 pt-5 xl:pb-[26px] lg:pb-5 pb-4">
+                <a href="/"><img src="./assets/image/svg/nav-logo.svg" alt="header-logo"></a>
+                <div
+                    class="flex menulist justify-center lg:items-center items-center duration-300 ease-linear text-white w-full -right-full min-h-screen fixed top-0 backdrop-blur-[40px] bg-black bg-opacity-[80%] z-[100] lg:relative lg:min-h-fit lg:w-fit lg:flex-row lg:right-0 lg:bg-transparent">
+                    <div
+                        class="Oswald xl:text-[22px] lg:text-xl text-sm text-white lg:gap-[40px] gap-6 flex max-lg:flex-col max-lg:text-center">
+                        <a class="hover:text-blue-500 duration-300 ease-linear" href="#about">About Us</a>
+                        <a class="hover:text-blue-500 duration-300 ease-linear" href="#story">Story</a>
+                        <a class="hover:text-blue-500 duration-300 ease-linear" href="#traits">Traits</a>
+                        <a class="hover:text-blue-500 duration-300 ease-linear" href="#roadmap">Roadmap</a>
+                        <a class="hover:text-blue-500 duration-300 ease-linear" href="#team">Team</a>
+                        <a class="hover:text-blue-500 duration-300 ease-linear" href="#faq">FAQ</a>
+                        <div class="relative bg-transparent flex justify-center items-center ">
+                            <img id="flag-img" class="w-[31px] rounded-full"
+                                src="./assets/image/svg/nav-america-flag.svg" alt="Current Flag">
+                            <select id="language-select"
+                                class="block max-w-max px-[11px] focus:outline-none bg-transparent appearance-auto  cursor-pointer">
+                                <option class=" first text-black" value="ENG"
+                                    data-flag="./assets/image/webp/flag-img.webp">ENG</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-bar"
+                    class="flex flex-col lg:hidden menubar text-end justify-between cursor-pointer z-[200] scroll-m-0  w-[32px] h-5 pt-[1px]">
+                    <span
+                        class="w-7 h-[2px] mb-[1px] rounded-lg bg-white menubarFirst origin-left  duration-300 ease-linear"></span>
+                    <span class="w-7 h-[2px] mb-[1px] rounded-lg bg-white menubarSecond"></span>
+                    <span
+                        class="w-7 h-[2px] mb-[1px] rounded-lg bg-white menubarThird origin-left  duration-300 ease-linear"></span>
+                </div>
+            </nav>
+            <div class="flex flex-wrap justify-around ">
+                <div class="w-6/12 flex items-center flex-col justify-center">
+                    <div class="flex items-center translate-x-[-100px]">
+                        <div class="max-w-[72px] mt-[55px] items-center ">
+                            <p class=" font-normal font-godzilla text-[145px] leading-[126px]">
+                                <span class="text-[#FF002A]">Kaijuu
+                                </span><span class="text-white">Crew</span>
+                            </p>
+                            <p class="text-[22px] oswald my-[18px] w-[365px] text-white text-left ">
+                                The ocean surges with spray and foam,
+                                As Kaijuu rise from depth to roam.
+                                Thirty-three hundred, and thirty-three more,
+                                Decked in garbs from days of yore.
+                                We scour the earth and sea and air,
+                                Our mission so grave few would dare.
+                                In search of untold wealth to hoard?
+                                Nay, but 'cause your Apes are Bored.</p>
+                            <p class="text-white font-bold text-5xl leading-[72px] text-left">10:20:15:10</p>
+                            <p class="text-[#9AACB6] font-normal text-lg leading-[27px] oswald">Days left</p>
+                            <div class="flex gap-4 w-[424px]">
+                                <button
+                                    class="  rounded-[7px] w-[210px] flex text-lg leading-[27px] font-bold items-center py-3  px-8 mt-[18px] text-white bg-[#FF002A] ">
+                                    <img class="me-[11px]" src="/assets/image/svg/discord.svg" alt="">
+                                    Join Discord
+                                </button>
+                                <button
+                                    class="  w-[210px] rounded-[7px] flex text-lg leading-[27px] font-bold items-center py-3 px-9 mt-[18px] text-white bg-[#FF002A] ">
+                                    Connect Wallet
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="w-6/12">
+                    <img class="lg:mb-[-109px] mt-[61px] max-[1024px]:mt-[218px] max-[1024px]:ms-[-51px] max-lg:relative z-10"
+                        src="./assets/image/png/hero-img.png" alt="hero img">
+                </div>
+            </div>
+            <div class="flex  ">
+                <div class="overflow-hidden w-full">
+                    <div class="flex animate-slide">
+                        <img src="./assets/image/png/s-1.png" alt="" class="">
+                        <img src="./assets/image/png/s-2.png" alt="" class="">
+                        <img src="./assets/image/png/s-23.png" alt="" class="">
+                        <img src="/assets/image/png/s-3.png " alt="" class="">
+                        <img src="./assets/image/png/s-4.png" alt="" class="">
+                        <img src="./assets/image/png/s-5.png" alt="" class="">
+                        <img src="./assets/image/png/s-6.png" alt="" class="">
+                        <img src="./assets/image/png/s-7.png" alt="" class="">
+                        <img src="/assets/image/png/s-8.png " alt="" class="">
+                        <img src="./assets/image/png/s-9.png" alt="" class="">
+                        <img src="./assets/image/png/s-10.png" alt="" class="">
+                        <img src="./assets/image/png/s-11.png" alt="" class="">
+                        <img src="./assets/image/png/s-12.png" alt="" class="">
+                        <img src="/assets/image/png/s-13.png " alt="" class="">
+                        <img src="./assets/image/png/s-14.png" alt="" class="">
+                        <img src="./assets/image/png/s-15.png" alt="" class="">
+                        <img src="./assets/image/png/s-16.png" alt="" class="">
+                        <img src="./assets/image/png/s-17.png" alt="" class="">
+                        <img src="/assets/image/png/s-18.png " alt="" class="">
+                        <img src="./assets/image/png/s-19.png" alt="" class="">
+                        <img src="./assets/image/png/s-20.png" alt="" class="">
+                        <img src="./assets/image/png/s-21.png" alt="" class="">
+                        <img src="./assets/image/png/s-22.png" alt="" class="">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ----------------------------about us---------------------------------- -->
+        <section class="bg-black">
+            <div class="flex flex-wrap mx-auto container justify-around ">
+                <div class="w-5/12 flex items-center flex-col justify-center">
+                    <div class="flex items-center translate-x-[-100px]">
+                        <div class="max-w-[72px] mt-[129px] me-[93px]  ">
+                            <p class=" font-normal gap-4 flex font-godzilla text-[72px] leading-[62px]">
+                                <span class="text-[#FF002A]">ABOUT
+                                </span><span class="text-white"> US</span>
+                            </p>
+                            <p
+                                class="text-[22px] font-normal leading-[33px] oswald my-[18px] w-[648px] text-white text-left ">
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                                Ipsum passages, and more recently
+                                with desktop publishing software like Aldus PageMaker including versions of Lorem
+                                Ipsum.Lorem Ipsum is simply dummy text
+                                of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book. It has survived not only
+                                five centuries, but also the leap into electronic typesetting, remaining essentially
+                                unchanged.</p>
+                            <div class="flex gap-4 w-[424px]">
+                                <button
+                                    class="  rounded-[7px] mb-[100px] w-[151px] flex text-lg leading-[27px] font-bold items-center py-3  px-8 mt-[18px] text-white bg-[#FF002A] ">
+                                    MINT NFT
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class=" mt-[61px]  flex w-4/12">
+                    <div class="">
+                        <img src="/assets/image/png/about-1st img.png" alt="">
+                        <img src="/assets/image/png/down-1.png" alt="">
+                    </div>
+                    <div class="">
+                        <img src="/assets/image/png/top-2-img.png" alt="">
+                        <img src="/assets/image/png/down-2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section
+            class="bg-no-repeat bg-[url('./assets/image/png/kajju-casic.png')] bg-cover 2xl:pt-[200px] xl:pt-24 lg:pt-16 pt-10 2xl:pb-[225px] xl:pb-44 lg:pb-16 pb-14 -mt-1">
+            <div class="container mx-auto overflow-visible max-w-[1794px] flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center">
+                    <h2
+                        class="lg:text-customLg md:text-5xl text-4xl font-godzilla max-w-[670px] text-primary text-center leading-none text-[#FF002A] xl:mb-[80px] lg:mb-14 mb-7 uppercase">
+                        Kaijuu <span class="text-white font-godzilla">Crew Classes</span>
+                    </h2>
+                </div>
+                <div
+                    class="flex flex-wrap justify-center items-center xl:gap-[131px] lg:gap-28 md:gap-12 sm:gap-10 gap-7">
+                    <div class="max-w-max w-full flex justify-center flex-col items-center overflow-hidden ">
+                        <img class="max-w-[254px] rounded-[20px] lg:mb-[18px] mb-1"
+                            src="./assets/image/png/classic-1.png" alt="scout-img">
+                        <p class="font-semibold xl:text-4xl lg:text-3xl text-xl text-white leading-[33px] text-center">
+                            Scouts
+                        </p>
+                    </div>
+                    <div class="max-w-max w-full flex justify-center flex-col items-center overflow-hidden ">
+                        <img class="max-w-[254px] rounded-[20px] lg:mb-[18px] mb-1"
+                            src="./assets/image/png/classic-2.png" alt="heavies-img">
+                        <p class="font-semibold xl:text-4xl lg:text-3xl text-xl text-white leading-[33px] text-center">
+                            Heavies
+                        </p>
+                    </div>
+                    <div class="max-w-max w-full flex justify-center flex-col items-center overflow-hidden ">
+                        <img class="max-w-[254px] rounded-[20px] lg:mb-[18px] mb-1"
+                            src="./assets/image/png/classic-3-5.png" alt="questionmark-img">
+                        <p class="font-semibold xl:text-4xl lg:text-3xl text-xl text-white leading-[33px] text-center">
+                            Legends
+                        </p>
+                    </div>
+                    <div class="max-w-max w-full flex justify-center flex-col items-center overflow-hidden ">
+                        <img class="max-w-[254px] rounded-[20px] lg:mb-[18px] mb-1"
+                            src="./assets/image/png/classic-4.png" alt="elementals-img">
+                        <p class="font-semibold xl:text-4xl lg:text-3xl text-xl text-white leading-[33px] text-center">
+                            Elementals
+                        </p>
+                    </div>
+                    <div class="max-w-max w-full flex justify-center flex-col items-center overflow-hidden">
+                        <img class="max-w-[254px] rounded-[20px] lg:mb-[18px] mb-1"
+                            src="./assets/image/png/classic-3-5.png" alt="questionmark-img">
+                        <p class="font-semibold xl:text-4xl lg:text-3xl text-xl text-white leading-[33px] text-center">
+                            ???
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- --------------------------------story---------------------------------- -->
+        <section id="Story" class="bg-[#001120]">
+            <div class="container !max-w-[1320px] mx-auto max-xl:px-4 xl:pt-[55px] my-[-1px]">
+                <div class="flex flex-wrap items-center xl:justify-between justify-center">
+                    <div class="w-full xl:w-6/12 xl:pt-[64px] xl:pb-[95px]">
+                        <img class="max-w-[619px] max-xl:mx-auto w-full max-xl:hidden"
+                            src="./assets/image/png/story-img.png" alt="">
+                    </div>
+                    <div
+                        class="w-full xl:w-[49%] md:mb-0 max-xl:items-center max-xl:justify-center pt-[60px] max-xl:text-center">
+                        <h2 class="lg:text-7xl sm:text-6xl text-5xl font-bold text-[#FF002A] mb-[29px] font-godzilla">
+                            Story
+                        </h2>
+                        <img class="max-w-[619px] max-xl:mx-auto w-full xl:hidden"
+                            src="./assets/image/png/story-img.png" alt="">
+                        <p class="text-white max-w-[648px] mb-[34px] text-[22px] max-xl:mx-auto leading-[150%]">
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                            an unknown printer took a galley of type and scrambled it to make a type specimen book. It
+                            has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--------------------------------------------traits------------------------------------>
+        <section id="Traits" class="bg-[url('/assets/image/png/traits-bg.png')] bg-cover bg-center bg-no-repeat">
+            <div class="container !max-w-[1320px] mx-auto max-xl:px-4  lg:py-[120px]">
+                <h2
+                    class="lg:text-7xl sm:text-6xl text-5xl font-bold text-[#FF002A] sm:mb-[60px] max-sm:pb-5 max-sm:pt-8 font-godzilla text-center">
+                    TRAITS
+                </h2>
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="w-full xl:w-1/2 max-xl:items-center max-xl:justify-center">
+                        <img class="max-w-[738px] max-xl:mx-auto w-full" src="./assets/image/png/traits-img.png" alt="">
+                    </div>
+                    <div class="w-full xl:w-5/12 max-xl:items-center max-xl:justify-center max-xl:text-center">
+                        <div class="backdrop-blur-[25px] py-[45px] rounded-[30px] border-[1px] px-[42px]">
+                            <h4 class="lg:text-5xl sm:text-4xl text-3xl text-white font-godzilla pb-[26px]">TRAITS</h4>
+                            <div class="border-white opacity-[20%] w-full border-t-[1px]"></div>
+                            <div class="w-full flex flex-wrap pt-[26px] pb-[56px]">
+                                <div class="w-1/2 flex flex-col">
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Background:8</p>
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Skins:19</p>
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Headwear:37</p>
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Clothes:44</p>
+                                </div>
+                                <div class="w-1/2 flex flex-col">
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Eyes:23</p>
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Mouth:33</p>
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Accessories:7</p>
+                                </div>
+                            </div>
+                            <h4 class="lg:text-5xl sm:text-4xl text-3xl text-white font-godzilla pb-[26px]">Stats</h4>
+                            <div class="border-white opacity-[20%] w-full border-t-[1px]"></div>
+                            <div class="w-full flex flex-wrap pt-[26px]">
+                                <div class="w-1/2 flex flex-col">
+                                    <p class="lg:text-5xl sm:text-4xl text-3xl text-white leading-[150%] font-bold">
+                                        9,999
+                                    </p>
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Total Kaijuu</p>
+                                </div>
+                                <div class="w-1/2 flex flex-col">
+                                    <p class="lg:text-5xl sm:text-4xl text-3xl text-white leading-[150%] font-bold">
+                                        0.0555
+                                    </p>
+                                    <p class="text-white text-lg lg:text-[22px] leading-[150%]">Mint Cost</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------------------roadmap--------------------- -->
+        <section id="roadmap" class="bg-black lg:min-h-[1024px] overflow-hidden lg:pt-[74px] pt-7 lg:pb-2 pb-7 -mt-1">
+            <div class="container flex justify-center mx-auto items-center w-full flex-col">
+                <h2
+                    class="text-center font-godzilla xl:mb-[45px] lg:mb-7 mb-5 text-[#FF002A] text-7xl md:text-5xl  font-normal leading-[115%]">
+                    RoadMap</h2>
+                <div class="w-full max-w-[1320px] mx-auto relative flex max-xl:hidden">
+                    <div class="w-full ">
+                        <ul class="py-8">
+                            <li class="text-white list-disc text-custom-md font-normal leading-[44px] Oswald">Ut
+                                eu ac
+                                sed duis
+                                nec amet.</li>
+                            <li class="text-white list-disc text-custom-md font-normal leading-[44px] Oswald">
+                                Sed
+                                elementum a
+                                tortor eros.</li>
+                        </ul>
+                        <div
+                            class="mt-5 relative bg-[url('assets/image/png/red-box-roadmap.png')]  bg-no-repeat bg-cover w-full max-w-[217px] h-[245px] flex items-center justify-center">
+                            <img src="assets/image/svg/top-white-line.svg" alt="white-line"
+                                class="absolute top-[-36px] translate-x-1 h-[42px] ">
+                            <h2 class="text-white text-[40px] Oswald  max-md:text-4xl max-sm:text-3xl">Phase-1</h2>
+                            <img src="assets/image/svg/lest-red.svg" alt="red-line"
+                                class="absolute right-[-55px] bottom-[-6px]">
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="absolute bg-[url('assets/image/png/red-box-roadmap.png')] bg-no-repeat bg-cover w-full max-w-[217px] h-[245px] top-[-66px] flex items-center justify-center left-[252px]">
+                                <img class="pointer-events-none absolute -top-36 max-w-[334px] pl-2"
+                                    src="assets/image/svg/white-boxes.svg" alt="white-box">
+                                <img src="assets/image/svg/top-white-line.svg" alt="line"
+                                    class="absolute bottom-[-34px] translate-x-1 h-[42px]">
+                                <h2 class="text-white text-custom-lg max-md:text-4xl max-sm:text-3xl Oswald">
+                                    Phase-2</h2>
+                                <img src="assets/image/svg/red-top-line.svg" alt="red-line"
+                                    class="absolute top-0 right-[-51px] h-[74px]">
+
+                            </div>
+                            <ul class="absolute xl:bottom-[-318px] mb-[-15px]  -bottom-96 translate-x-[295px] w-full">
+                                <li
+                                    class="text-white mb-[-12px]  list-disc text-custom-md xl:w-[370px] font-normal leading-[44px] Oswald">
+                                    Sagittis
+                                    tristique molestie eupharetra.</li>
+                                <li
+                                    class="text-white list-disc text-[22px] xl:w-[367px] font-normal leading-[44px] Oswald">
+                                    Nibh
+                                    convallis
+                                    ornare fringilla diam proin volutpat aliquet nunc.</li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <ul class="absolute top-[-360px] translate-x-[495px]  w-[358px]">
+                                <li class="text-white list-disc text-custom-md font-normal leading-[44px] Oswald">
+                                    Adipiscing velit
+                                    turpis pretium, tellus.</li>
+                                <li class="text-white list-disc text-custom-md font-normal leading-[44px] Oswald">
+                                    Ornare
+                                    urna
+                                    arcu, dolor vestibulum.</li>
+                            </ul>
+                            <div
+                                class="absolute bg-[url('assets/image/png/red-box-roadmap.png')] bg-no-repeat bg-cover w-full max-w-[217px] h-[245px] top-[-238px] left-[500px] flex items-center justify-center">
+                                <img src="assets/image/svg/top-white-line.svg" alt="line"
+                                    class="absolute top-[-34px] translate-x-1 h-[42px]">
+                                <h2 class="text-white text-custom-lg max-md:text-4xl max-sm:text-3xl Oswald">
+                                    Phase-3</h2>
+                                <img src="assets/image/svg/lest-red.svg" alt="red-line"
+                                    class="absolute bottom-0 right-[-54px]">
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="absolute bg-[url('assets/image/png/red-box-roadmap.png')] bg-no-repeat bg-cover w-full max-w-[217px] h-[245px] bottom-[-183px] left-[746px] flex items-center justify-center">
+                                <img class="pointer-events-none absolute -top-36 max-w-[334px] pl-2"
+                                    src="assets/image/svg/white-boxes.svg" alt="white-box">
+                                <img src="assets/image/svg/top-white-line.svg" alt="line"
+                                    class="absolute bottom-[-34px] translate-x-1 h-[42px]">
+                                <h2 class="text-white text-custom-lg max-md:text-4xl max-sm:text-3xl Oswald">
+                                    Phase-4</h2>
+                                <img src="assets/image/svg/red-top-line.svg" alt="red-line"
+                                    class="absolute top-0 right-[-54px] h-[74px]">
+
+                            </div>
+                            <ul class="absolute xl:bottom-[-318px] -bottom-[420px] translate-x-[795px] xl:w-[458px]">
+                                <li class="text-white list-disc text-custom-md leading-[44px] font-normal Oswald">
+                                    Eget
+                                    imperdiet
+                                    mauris interdum ut egestas lacinia lacus.</li>
+                                <li
+                                    class="text-white list-disc text-custom-md leading-[44px] max-w-[358px] font-normal Oswald">
+                                    Non ipsum,
+                                    cursus consectetur fringilla aliquam.</li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <ul class="absolute top-[-350px] translate-x-[1035px] w-full 2xl:w-[190px] ">
+                                <li class="text-white list-disc Oswald font-normal text-custom-md leading-[44px] ">
+                                    Elementum
+                                    elementum sit mauris amet non.</li>
+                            </ul>
+                            <div
+                                class="absolute bg-[url('assets/image/png/red-box-roadmap.png')] bg-no-repeat bg-cover w-full max-w-[217px] h-[245px] top-[-230px] left-[997px] flex items-center justify-center">
+                                <img src="assets/image/svg/top-white-line.svg" alt="line"
+                                    class="absolute top-[-34px] translate-x-1 h-[42px]">
+                                <h2 class="text-white text-custom-lg Oswald max-md:text-4xl max-sm:text-3xl">
+                                    Phase-5</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex xl:items-center justify-center flex-col gap-3 xl:hidden">
+                    <div class="flex items-center gap-[55px] max-sm:gap-7">
+                        <div
+                            class="felx items-center bg-[url('assets/image/png/red-box-roadmap.png')] w-[217px] h-[245px] max-sm:w-[150px] max-sm:h-[168px] flex justify-center bg-cover bg-no-repeat">
+                            <h2 class="text-white text-3xl Oswald max-sm:text-2xl">Phase-1</h2>
+                        </div>
+                        <div>
+                            <ul class="max-sm:max-w-32">
+                                <li
+                                    class="text-white list-disc lg:text-base text-xs font-normal leading-[44px] Oswald w-full">
+                                    Ut eu ac sed duis nec amet.</li>
+                                <li
+                                    class="text-white list-disc lg:text-base text-xs font-normal leading-[44px] Oswald w-full">
+                                    Sed elementum a tortor eros.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[55px] max-sm:gap-7 ">
+                        <div
+                            class="felx items-center bg-[url('assets/image/png/red-box-roadmap.png')] Oswald w-[217px] h-[245px] max-sm:w-[150px] max-sm:h-[168px] flex justify-center bg-cover bg-no-repeat">
+                            <h2 class="text-white text-3xl Oswald max-sm:text-2xl">Phase-2</h2>
+                        </div>
+                        <div>
+                            <ul class="max-sm:max-w-32">
+                                <li
+                                    class="text-white list-disc lg:text-base text-xs font-normal leading-[44px] w-full Oswald">
+                                    Sagittis tristique molestie eu pharetra.</li>
+                                <li
+                                    class="text-white list-disc lg:text-base text-xs font-normal leading-[44px] w-full Oswald">
+                                    Nibh convallis ornare fringilla diam proin volutpat aliquet nunc.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[55px] max-sm:gap-7 ">
+                        <div
+                            class="felx items-center bg-[url('assets/image/png/red-box-roadmap.png')] Oswald w-[217px] h-[245px] max-sm:w-[150px] max-sm:h-[168px] flex justify-center bg-cover bg-no-repeat">
+                            <h2 class="text-white text-3xl Oswald max-sm:text-2xl">Phase-3</h2>
+                        </div>
+                        <div>
+                            <ul class="max-sm:max-w-32">
+                                <li
+                                    class="text-white list-disc lg:text-base text-xs w-full font-normal leading-[44px] Oswald">
+                                    Adipiscing velit turpis pretium, tellus.</li>
+                                <li
+                                    class="text-white list-disc lg:text-base text-xs w-full font-normal leading-[44px] Oswald">
+                                    Ornare urna arcu, dolor vestibulum.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[55px] max-sm:gap-7 ">
+                        <div
+                            class="felx items-center bg-[url('assets/image/png/red-box-roadmap.png')] Oswald w-[217px] h-[245px] max-sm:w-[150px] max-sm:h-[168px] flex justify-center bg-cover bg-no-repeat">
+                            <h2 class="text-white text-3xl Oswald max-sm:text-2xl">Phase-4</h2>
+                        </div>
+                        <div>
+                            <ul class="max-sm:max-w-32">
+                                <li
+                                    class="text-white list-disc lg:text-base Oswald text-xs font-normal leading-[44px] Oswald w-full">
+                                    Eget imperdiet mauris interdum ut egestas lacinia lacus.</li>
+                                <li
+                                    class="text-white list-disc Oswald lg:text-base text-xs font-normal leading-[44px] Oswald w-full">
+                                    Non ipsum, cursus consectetur fringilla aliquam.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[55px] max-sm:gap-7 ">
+                        <div
+                            class="felx items-center bg-[url('assets/image/png/red-box-roadmap.png')] w-[217px] h-[245px] max-sm:w-[150px] max-sm:h-[168px] flex justify-center bg-cover bg-no-repeat">
+                            <h2 class="text-white text-3xl Oswald max-sm:text-2xl">Phase-5</h2>
+                        </div>
+                        <div>
+                            <ul class="max-sm:max-w-32">
+                                <li
+                                    class="text-white Oswald list-disc lg:text-base text-xs font-normal leading-[44px] Oswald w-full">
+                                    Elementum elementum sit mauris amet non.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------------------------------------------team------------------------------------ -->
+        <section class="pt-[72px] pb-[123px]  max-xl:py-20 max-md:py-10 max-sm:py-5 bg-black">
+            <p
+                class="text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-4xl text-redLight text-center mb-14 max-md:md-12 max-sm:mb-5 font-godzila leading-[95%] ">
+                Team</p>
+            <div class="flex max-2xl:flex-col justify-center mx-auto items-center">
+                <div class="prev-parent max-2xl:!hidden">
+                    <img class="cursor-pointer prev transition-all ease-linear duration-300 max-w-[74px]"
+                        src="./assets/image/svg/left-btn.svg" alt="left-btn">
+                </div>
+                <div class="container">
+                    <div class="flex slider">
+
+                        <div class="max-w-[424px] max-sm:max-w-[350px]">
+                            <img src="./assets/image/png/black-fram.png" alt="blank">
+                            <p class="font-normal text-white text-center font-ring text-4xl max-sm:text-2xl">???</p>
+                            <p
+                                class="font-normal text-white text-center font-ring text-lg mt-2 max-sm:mt-1 max-sm:text-base max-xl:mb-5">
+                                KJC#29
+                            </p>
+                        </div>
+                        <div class="max-w-[424px] max-sm:max-w-[350px]">
+                            <img src="./assets/image/png/black-fram.png" alt="blank">
+                            <p class="font-normal text-white text-center font-ring text-4xl max-sm:text-2xl">???</p>
+                            <p
+                                class="font-normal text-white text-center font-ring text-lg mt-2 max-sm:mt-1 max-sm:text-base max-xl:mb-5">
+                                KJC#29
+                            </p>
+                        </div>
+                        <div class="max-w-[424px] max-sm:max-w-[350px]">
+                            <img src="./assets/image/png/boss-img.png" alt="boss-kaiju">
+                            <p class="font-normal text-white text-center font-ring text-4xl max-sm:text-2xl">Boss Kaijuu
+                            </p>
+                            <p
+                                class="font-normal text-white text-center font-ring text-lg mt-2 max-sm:mt-1 max-sm:text-base max-xl:mb-5">
+                                KJC#29
+                            </p>
+                        </div>
+                        <div class="max-w-[424px] max-sm:max-w-[350px]">
+                            <img src="./assets/image/png/black-fram.png" alt="blank">
+                            <p class="font-normal text-white text-center font-ring text-4xl max-sm:text-2xl">???</p>
+                            <p
+                                class="font-normal text-white text-center font-ring text-lg mt-2 max-sm:mt-1 max-sm:text-base max-xl:mb-5">
+                                KJC#29
+                            </p>
+                        </div>
+                        <div class="max-w-[424px] max-sm:max-w-[350px]">
+                            <img src="./assets/image/png/black-fram.png" alt="blank">
+                            <p class="font-normal text-white text-center font-ring text-4xl max-sm:text-2xl">???</p>
+                            <p
+                                class="font-normal text-white text-center font-ring text-lg mt-2 max-sm:mt-1 max-sm:text-base max-xl:mb-5">
+                                KJC#29
+                            </p>
+                        </div>
+                        <div class="max-w-[424px] max-sm:max-w-[350px]">
+                            <img src="./assets//image/png/boss-img.png" alt="boss-kaiju">
+                            <p class="font-normal text-white text-center font-ring text-4xl max-sm:text-2xl">Boss Kaijuu
+                            </p>
+                            <p
+                                class="font-normal text-white text-center font-ring text-lg mt-2 max-sm:mt-1 max-sm:text-base max-xl:mb-5">
+                                KJC#29
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-parent max-2xl:!hidden">
+                    <img class="next cursor-pointer transition-all ease-linear duration-300 max-w-[74px]"
+                        src="./assets/image/svg/right-btn.svg" alt="red-next-arrow">
+                </div>
+            </div>
+        </section>
+        <!-- ---------------------------FAQ------------------------- -->
+        <section id="faq" class=" bg-cover bg-[url('assets/image/png/FAQ-bg.png')] -mt-1 lg:pt-[98px] md:pt-12 pt-7">
+            <div
+                class="container flex flex-col justify-center px-3 mx-auto max-w-[1320px] w-full xl:pb-[120px] lg:pb-20 pb-12 items-center">
+                <div>
+                    <h2
+                        class="lg:text-customLg md:text-5xl text-4xl font-godzilla max-w-[670px] text-[#FF002A] text-center leading-none xl:mb-[55px] lg:mb-6 mb-4">
+                        FAQ<span class="text-white font-godzilla lg:text-[40px] text-xl">s</span>
+                    </h2>
+                </div>
+                <div class="max-w-[830px] w-full space-y-[17px]" id="accordion-container">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item backdrop-blur-[35px] bg-custom-gradient border-[1px] lg:pt-[20px] lg:pb-[14px] max-lg:py-3 lg:px-8 md:px-5 px-4 rounded-[10px] cursor-pointer"
+                        onclick="toggleAccordion(this)">
+                        <div
+                            class="flex justify-between text-white Oswald items-center leading-[33px] font-bold lg:text-[22px] text-base">
+                            <span>Volutpat gravida sapien in purus</span>
+                            <svg class="accordion-icon transition-transform duration-300" width="11" height="8"
+                                viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.63729 0L5.5 4.82292L1.36271 0L0 1.58854L5.5 8L11 1.58854L9.63729 0Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div
+                            class="accordion-content font-normal max-w-[751px] Oswald lg:pb-[17px] pb-3 leading-[33px] lg:mt-[34px] md:mt-6 mt-4 lg:text-[22px] text-base text-white">
+                            Ac pretium feugiat sed id ut viverra nunc lacus, pulvinar purus malesuada adipiscing nisl
+                            nullam mi diam sit nisi consectetur non etiam diam.
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item backdrop-blur-[35px] bg-custom-gradient border-[1px] lg:pt-[20px] lg:pb-[14px] max-lg:py-3 lg:px-8 md:px-5 px-4 rounded-[10px] cursor-pointer"
+                        onclick="toggleAccordion(this)">
+                        <div
+                            class="flex justify-between text-white Oswald items-center leading-[33px] font-bold lg:text-[22px] text-base">
+                            <span>Volutpat gravida sapien in purus</span>
+                            <svg class="accordion-icon transition-transform duration-300" width="11" height="8"
+                                viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.63729 0L5.5 4.82292L1.36271 0L0 1.58854L5.5 8L11 1.58854L9.63729 0Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div
+                            class="accordion-content max-w-[751px] Oswald lg:pb-[17px] pb-3 leading-[33px] lg:mt-[40px] md:mt-6 mt-4 lg:text-[22px] text-base text-white">
+                            Ac pretium feugiat sed id ut viverra nunc lacus, pulvinar purus malesuada adipiscing nisl
+                            nullam mi diam sit nisi consectetur non etiam diam.
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item backdrop-blur-[35px] bg-custom-gradient border-[1px] lg:pt-[20px] lg:pb-[14px] max-lg:py-3 lg:px-8 md:px-5 px-4 rounded-[10px] cursor-pointer"
+                        onclick="toggleAccordion(this)">
+                        <div
+                            class="flex justify-between text-white Oswald items-center leading-[33px] font-bold lg:text-[22px] text-base">
+                            <span>Volutpat gravida sapien in purus</span>
+                            <svg class="accordion-icon transition-transform duration-300" width="11" height="8"
+                                viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.63729 0L5.5 4.82292L1.36271 0L0 1.58854L5.5 8L11 1.58854L9.63729 0Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div
+                            class="accordion-content max-w-[751px] Oswald lg:pb-[17px] pb-3 leading-[33px] lg:mt-[40px] md:mt-6 mt-4 lg:text-[22px] text-base text-white">
+                            Ac pretium feugiat sed id ut viverra nunc lacus, pulvinar purus malesuada adipiscing nisl
+                            nullam mi diam sit nisi consectetur non etiam diam.
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="accordion-item backdrop-blur-[35px] bg-custom-gradient border-[1px] lg:pt-[20px] lg:pb-[14px] max-lg:py-3 lg:px-8 md:px-5 px-4 rounded-[10px] cursor-pointer"
+                        onclick="toggleAccordion(this)">
+                        <div
+                            class="flex justify-between text-white Oswald items-center leading-[33px] font-bold lg:text-[22px] text-base">
+                            <span>Volutpat gravida sapien in purus</span>
+                            <svg class="accordion-icon transition-transform duration-300" width="11" height="8"
+                                viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.63729 0L5.5 4.82292L1.36271 0L0 1.58854L5.5 8L11 1.58854L9.63729 0Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div
+                            class="accordion-content max-w-[751px] Oswald lg:pb-[17px] pb-3 leading-[33px] lg:mt-[40px] md:mt-6 mt-4 lg:text-[22px] text-base text-white">
+                            Ac pretium feugiat sed id ut viverra nunc lacus, pulvinar purus malesuada adipiscing nisl
+                            nullam mi diam sit nisi consectetur non etiam diam.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="container flex flex-col justify-center lg:pb-[60px] md:pb-12 pb-4 lg:pt-[72px] md:pt-12 pt-7 mx-auto max-w-[1320px] w-full items-center">
+                <h2
+                    class="lg:text-4xl text-3xl font-godzilla max-w-[670px] text-[#FF002A] text-center leading-none xl:mb-[28px] lg:mb-6 mb-4">
+                    Kaijuu<span class="text-white font-godzilla">Crew</span>
+                </h2>
+                <div class="flex gap-[24px] max-h-[41px] lg:mb-7 md:mb-5 mb-4">
+                    <a href="https://x.com/" target="_blank">
+                        <img class="hover:scale-[1.09] duration-300 ease-linear lg:max-w-[41px] md:max-w-9 max-w-7"
+                            src="./assets/image/svg/twitter.svg" alt="twitter-icon">
+                    </a> <a href="https://discord.com/" target="_blank">
+                        <img class="hover:scale-[1.09] duration-300 ease-linear lg:max-w-[52px] md:max-w-10 max-w-8"
+                            src="./assets/image/svg/discord-bottom.svg" alt="discord-icon">
+                    </a> <a href="https://www.instagram.com/" target="_blank">
+                        <img class="hover:scale-[1.09] duration-300 ease-linear lg:max-w-[41px] md:max-w-9 max-w-7"
+                            src="./assets/image/svg/insta.svg" alt="instagram-icon">
+                    </a> <a href="https://opensea.io/" target="_blank">
+                        <img class="hover:scale-[1.09] duration-300 ease-linear lg:max-w-[41px] md:max-w-9 max-w-7"
+                            src="./assets/image/svg/ship.svg" alt="open-sea-icon">
+                    </a>
+                </div>
+                <p class="lg:text-[22px] md:text-base Oswald text-sm text-white">Copyright © Kaijuu Crew 2021 <span
+                        id="currentYear"></span>
+                </p>
+            </div>
+        </section>
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- nav--------------- -->
+        <script>
+            const menuicon = document.querySelector(".menubar");
+            const menuList = document.querySelector(".menulist");
+            const menubarFirst = document.querySelector(".menubarFirst");
+            const menubarSecond = document.querySelector(".menubarSecond");
+            const menubarThird = document.querySelector(".menubarThird");
+            const body = document.body;
+
+            menuicon.addEventListener("click", toggleMenu);
+
+            function toggleMenu() {
+                if (window.innerWidth < 1024) {
+                    menuList.classList.toggle("-right-full");
+                    menuList.classList.toggle("right-0");
+                    menubarFirst.classList.toggle("rotate-[45deg]");
+                    menubarFirst.classList.toggle("-translate-y-[1.5px]");
+                    menubarSecond.classList.toggle("hidden");
+                    menubarThird.classList.toggle("rotate-[-45deg]");
+                    menubarThird.classList.toggle("translate-y-[1.5px]");
+                    body.classList.toggle("overflow-hidden");
+                }
+            }
+            const menuItems = document.querySelectorAll(".menulist button, .menulist a");
+            menuItems.forEach(item => {
+                item.addEventListener("click", () => {
+                    if (window.innerWidth < 992) {
+                        toggleMenu();
+                    }
+                });
+            });
+        </script>
+        <!-- ---------------------------FAQ------------------------- -->
+        <script>
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const firstItem = document.querySelector('.accordion-item');
+                toggleAccordion(firstItem, true);
+            });
+
+            function toggleAccordion(element, forceOpen = false) {
+                const container = document.getElementById('accordion-container');
+                const allItems = container.querySelectorAll('.accordion-item');
+                const content = element.querySelector('.accordion-content');
+                const icon = element.querySelector('.accordion-icon');
+
+                allItems.forEach((item) => {
+                    const itemContent = item.querySelector('.accordion-content');
+                    const itemIcon = item.querySelector('.accordion-icon');
+                    if (item !== element) {
+                        itemContent.classList.add('hidden');
+                        item.classList.remove('bg-gray-700');
+                        itemIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                if (forceOpen || content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    element.classList.remove('bg-gray-700');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        </script>
+        <!-- slider------------- -->
+        <script>
+            $(document).ready(function () {
+                $('.slider').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true,
+                    prevArrow: $('.prev'),
+                    nextArrow: $('.next'),
+                    responsive: [
+                        {
+                            breakpoint: 153,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                dots: true,
+                                centerMode: true,
+                                infinite: true,
+                                dots: true,
+                                autoplay: true,
+                                autoplaySpeed: 300,
+                            }
+                        },
+                    ]
+                });
+            });
+        </script>
+    </body>
+
+</html>
